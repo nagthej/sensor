@@ -4,20 +4,22 @@ GPIO.setmode(GPIO.BOARD)                     #Set GPIO pin numbering
 
 TRIG = 10                                  #Associate pin 23 to TRIG
 ECHO = 24                                  #Associate pin 24 to ECHO
-
+LED = 12
 print "Distance measurement in progress"
 
+GPIO.setup(LED,GPIO.OUT)  
 GPIO.setup(TRIG,GPIO.OUT)                  #Set pin as GPIO out
 GPIO.setup(ECHO,GPIO.IN)                   #Set pin as GPIO in
-         
+GPIO.output(LED, False)                 #Set TRIG as LOW
 
 
 while True: 
-
+  GPIO.output(LED, True)                 #Set TRIG as LOW  
   GPIO.output(TRIG, False)                 #Set TRIG as LOW
   print "Waitng For Sensor To Settle"
   time.sleep(2)
-  print "Hi"                               #Delay of 2 seconds
+                   #Set TRIG as LOW
+                          #Delay of 2 seconds
 
   if GPIO.output(TRIG, True):
      print"yes"                            #Set TRIG as HIGH
