@@ -1,6 +1,6 @@
 import time
 import paho.mqtt.client as paho
-import ultra_test
+#import ultra_test
 import subprocess 
 import os
 import RPi.GPIO as GPIO                    #Import GPIO library
