@@ -18,8 +18,6 @@ while True:
   GPIO.output(TRIG, False)                 #Set TRIG as LOW
   print "Waitng For Sensor To Settle"
   time.sleep(2)
-                   #Set TRIG as LOW
-                          #Delay of 2 seconds
 
   if GPIO.output(TRIG, True):
      print"yes"                            #Set TRIG as HIGH
